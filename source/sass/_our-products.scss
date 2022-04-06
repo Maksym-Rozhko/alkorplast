@@ -1,0 +1,130 @@
+.content-container {
+    padding-top: 120px;
+}
+
+.products {
+    padding-bottom: 150px;
+    position: relative;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        width: 207px;
+        height: 355px;
+        background-image: url("../assets//images/our-products/product-icon1.png");
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-size: cover;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.main-title {
+    @include title;
+}
+
+.main-subtitle {
+    @include fontCopperplate;
+    @include subtitle;
+}
+
+.products__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.products-item {
+    max-width: 630px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    overflow: hidden;
+
+    &:not(:last-child),
+    &:not(:nth-child(7)) {
+        margin-bottom: 44px;
+    }
+
+    &__img {
+        position: relative;
+        margin-right: 55px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 405px;
+            height: 405px;
+            border: 1px solid #1d77f1;
+            border-radius: 52px;
+            transform: rotate(-15deg);
+            top: -80px;
+            right: 16px;
+        }
+    }
+
+    &__number {
+        @include fontCopperplate;
+        color: rgba(166,180,146, .1);
+        font-size: 76px;
+        line-height: 77px;
+        display: block;
+        text-align: right;
+    }
+
+    &__title {
+        @include fontCopperplate;
+        max-width: 245px;
+        font-size: 30px;
+        line-height: 31px;
+        color: #27353F;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &__descript {
+        font-size: 16px;
+        line-height: 22px;
+        max-width: 235px;
+        color: #27353F;
+        margin-top: 12px;
+        margin-bottom: 28px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #27353F;
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 600;
+        position: relative;
+        display: block;
+        max-width: 167px;
+        width: 100%;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-color: rgba(166,180,146, .2);
+            width: 29px;
+            height: 29px;
+            border-radius: 50%;
+            top: calc(50% - 15px);
+            right: 0;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url('../assets/images/main-screen/icons/arrow-long.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 29px;
+            height: 29px;
+            border-radius: 50%;
+            top: calc(50% - 15px);
+            right: 15px;
+        }
+    }
+}

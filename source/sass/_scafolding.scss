@@ -29,3 +29,47 @@ img {
   font-weight: normal;
   font-style: normal;
 }
+
+@mixin title {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 58px;
+  text-align: center;
+  color: #27353f;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@mixin subtitle {
+  font-size: 18px;
+  line-height: 18px;
+  color: #27353F;
+  text-align: center;
+  position: relative;
+  margin-top: 16px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 370px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: #27353f;
+    width: 40px;
+    height: 1px;
+    top: 50%;
+    left: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: #27353f;
+    width: 40px;
+    height: 1px;
+    top: 50%;
+    right: 0;
+  }
+}
