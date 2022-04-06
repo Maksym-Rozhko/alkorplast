@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  position: relative;
+}
+
+img {
+  display: block;
+}
+
+.wrapper {
+  max-width: 1290px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  // outline: 2px solid red;
+}
+
+@mixin fontCopperplate {
+  font-family: 'Copperplate', serif;
+  font-weight: normal;
+  font-style: normal;
+}
