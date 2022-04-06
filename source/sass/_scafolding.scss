@@ -41,6 +41,11 @@ img {
   margin-bottom: 0;
 }
 
+@mixin title-mob {
+  font-size: 36px;
+  line-height: 44px;
+}
+
 @mixin subtitle {
   font-size: 18px;
   line-height: 18px;
@@ -72,4 +77,10 @@ img {
     top: 50%;
     right: 0;
   }
+}
+
+@mixin subtitle-mob {
+  font-size: 14px;
+  line-height: 100%;
+  max-width: 270px;
 }

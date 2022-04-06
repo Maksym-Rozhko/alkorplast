@@ -1,0 +1,146 @@
+.about__image--mob {
+    display: none;
+}
+
+.about {
+    padding-bottom: 71px;
+    & .main-subtitle {
+        margin-bottom: 5px;
+    }
+
+    & .main-button {
+        padding: 13px 0px;
+        max-width: 240px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    &__image {
+        margin-right: 155px;
+    }
+
+    &__content {
+        max-width: 440px;
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 600;
+        color: #27353F;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 19px;
+        font-weight: 600;
+        color: #27353F;
+        margin-top: 0;
+        margin-bottom: 20px;
+
+        &--margin {
+            margin-bottom: 46px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .about {
+        &__container {
+            justify-content: space-between;
+        }
+        &__image {
+            margin-right: 15px;
+        }
+    }
+}
+
+@media (max-width: 967px) {
+    .about {
+        & .main-subtitle {
+            margin-bottom: 36px;
+        }
+        &__container {
+            flex-direction: column;
+        }
+        &__image {
+            display: none;
+        }
+        &__text {
+            margin-bottom: 0;
+            &--margin {
+                margin-bottom: 46px;
+            }
+        }
+        &__image--mob {
+            display: block;
+            width: 345px;
+            height: 384px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            & img {
+                width: 345px;
+                height: 384px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .about {
+        text-align: center;
+    }
+    .main-title {
+        @include title-mob;
+    }
+
+    .main-subtitle {
+        @include subtitle-mob;
+        max-width: 303px;
+    }
+}
+
+@media (max-width: 375px) {
+    .about {
+        &__content {
+            text-align: center;
+            max-width: 345px;
+        }
+        &__title {
+            & span {
+                display: block;
+            }
+        }
+        &__text {
+            max-width: 312px;
+            margin: 0 auto;
+
+            &--margin {
+                margin-bottom: 40px;
+                max-width: 300px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        &__image--mob {
+            display: block;
+            max-width: 345px;
+            height: auto;
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            & img {
+                max-width: 345px;
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,9 +1,34 @@
 .content-container {
-    padding-top: 120px;
+    padding-top: 60px;
+    padding-bottom: 110px;
+    position: relative;
+    overflow: hidden;
+
+    &::before, 
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background-repeat: no-repeat;
+    }
+
+    &::before {
+        background-image: url('../assets/images/main-screen/icons/gradient1.svg');
+        width: 2236px;
+        height: 1717px;
+        bottom: 280px;
+    }
+
+    &::after {
+        background-image: url('../assets/images/about-us/bg-icon1.png');
+        width: 244px;
+        height: 535px;
+        bottom: 340px;
+    }
 }
 
 .products {
-    padding-bottom: 150px;
+    padding-bottom: 173px;
     position: relative;
     
     &::before {
@@ -16,7 +41,7 @@
         z-index: -1;
         background-size: cover;
         right: 0;
-        bottom: 0;
+        bottom: 90px;
     }
 }
 
@@ -39,8 +64,10 @@
     max-width: 630px;
     width: 100%;
     background-color: #fff;
+    border-radius: 8px;
     display: flex;
     overflow: hidden;
+    transition-duration: .4s;
 
     &:not(:last-child),
     &:not(:nth-child(7)) {
@@ -71,6 +98,7 @@
         line-height: 77px;
         display: block;
         text-align: right;
+        transition-duration: .4s
     }
 
     &__title {
@@ -102,6 +130,18 @@
         display: block;
         max-width: 167px;
         width: 100%;
+        transition-duration: .4s;
+
+        &:hover {
+            color: #1d77f1;
+
+            &::after {
+                animation: arrow-shake infinite ease-in-out 2s;
+            }
+            &::before {
+                animation: pulsing 2s infinite ease-in-out;
+            }
+        }
 
         &::before {
             content: "";
@@ -124,7 +164,159 @@
             height: 29px;
             border-radius: 50%;
             top: calc(50% - 15px);
-            right: 15px;
+            transform: translateX(0);
         }
+    }
+
+    &:hover {
+        box-shadow: 5px 20px 26px 4px rgba(20, 69, 129, 0.05);
+
+        .products-item__number {
+            color: rgba(29, 119, 241, .3);
+        }
+    }
+}
+
+
+@media (max-width: 1330px) {
+    .products-item {
+        max-width: 570px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .products__container {
+        justify-content: center;
+    }
+
+    .products-item {
+        max-width: 630px;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 630px) {
+    .products-item {
+        &__img {
+            margin-right: 25px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .main-title {
+        @include title-mob;
+    }
+
+    .main-subtitle {
+        @include subtitle-mob;
+    }
+
+    .products-item {
+        max-width: 345px;
+        min-height: 200px;
+        padding-bottom: 10px;
+        padding-right: 10px;
+
+        &:not(:last-child),
+        &:not(:nth-child(7)) {
+            margin-bottom: 25px;
+        }
+
+        &__img {
+            margin-right: 25px;
+            &::after {
+                top: -20px;
+                right: 0px;
+                width: 240px;
+                height: 200px;
+            }
+
+            & img {
+                width: 169px;
+            }
+        }
+
+        &__content {
+            max-width: 145px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        &__number {
+            font-size: 40px;
+            line-height: 41px;
+        }
+
+        &__title {
+            font-size: 20px;
+            line-height: 21px; 
+        }
+
+        &__descript {
+            display: none;
+        }
+
+        &__link {
+            text-transform: capitalize;
+            max-width: 114px;
+
+            &::before {
+                right: 15px;
+            }
+
+            & span {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .content-container {
+        padding-bottom: 0;
+        &::before, 
+        &::after {
+            content: none;
+        }
+    }
+    .products {
+        padding-bottom: 100px;
+
+        &::before {
+            content: none;
+        }
+    }
+    .content-container {
+        padding-top: 0;
+    }
+}
+
+@keyframes arrow-shake {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulsing {
+    0% {
+        transform: scale(0.5, 0.5);
+    }
+    50% {
+        transform: scale(1.0, 1.0);
+    }
+    100% {
+        transform: scale(0.5, 0.5);
     }
 }

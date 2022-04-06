@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" href="assets/images/main-screen/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.min.css">
     <title>
         alkorplast
@@ -12,9 +13,599 @@
 </head>
 <body>
     <div class="main-screen">
+        <header class="header header-mobile">
+            <div class="header-mobile__wrapp">
+                <a href="/" class="logo">
+                    <img class="logo-img" src="assets/images/main-screen/logo.svg" alt="Alkorplast">
+                </a>
+                <div class="main-screen__contacts">
+                    <a href="tel:+380676795167" class="phone-number">
+                        <div class="phone-number__circle">
+                            <svg class="icon">
+                                <use xlink:href="assets/images/sprites.svg#phone"></use>
+                            </svg>
+                        </div>
+                    </a>
+                    <button class="search">
+                        <svg class="icon">
+                            <use xlink:href="assets/images/sprites.svg#lupa"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="burger-menu">
+                    <span class="burger-menu__line"></span>
+                </div>
+            </div>
+            <div class="nav-container">
+                <nav class="nav">
+                    <ul class="menu">
+                        <li class="parent">
+                            <a href="#">продукция</a>
+                            <ul class="nav-child">
+                                <li class="parent">
+                                    <a href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="assets/images/sprites.svg#nav-icon1"></use>
+                                        </svg>
+                                        Стаканы молочные
+                                    </a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">стаканы в sleeve-етикетке</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">стакан с боковой печатью (офсет)</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">стакан формовка</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Крышка нахлабучка</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="assets/images/sprites.svg#nav-icon2"></use>
+                                        </svg>
+                                        Лотки ВПС
+                                    </a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Лотки №1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Лотки №2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Лотки №3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Лотки №4</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="assets/images/sprites.svg#nav-icon3"></use>
+                                        </svg>
+                                        Лоток под запайку
+                                    </a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Лоток под запайку №1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Лоток под запайку №2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Лоток под запайку №3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Лоток под запайку №4</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="assets/images/sprites.svg#nav-icon4"></use>
+                                        </svg>
+                                        Влаговпитывающие салфетки
+                                    </a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Влаговпитывающие салфеткa №1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Влаговпитывающие салфеткa №2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Влаговпитывающие салфеткa №3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Влаговпитывающие салфеткa №4</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="assets/images/sprites.svg#nav-icon5"></use>
+                                        </svg>
+                                        Пленка ПВХ
+                                    </a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Пленка №1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Пленка №2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Пленка №3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Пленка №4</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="assets/images/sprites.svg#nav-icon6"></use>
+                                        </svg>
+                                        Крышка под лотки
+                                    </a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Крышка под лоткок №1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Крышка под лоткок №2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Крышка под лоткок №3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Крышка под лоткок №4</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">
+                                        <svg class="icon">
+                                            <use xlink:href="assets/images/sprites.svg#nav-icon7"></use>
+                                        </svg>
+                                        Коррексы
+                                    </a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Коррекс №1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Коррекс №2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Коррекс №3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Коррекс №4</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="parent">
+                            <a href="#">Сертификаты</a>
+                            <ul class="nav-child">
+                                <li class="parent">
+                                    <a href="#">Сертификат№1</a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Сертификат№1 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Сертификат№1 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Сертификат№1 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Сертификат№1 child</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">Сертификат№2</a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Сертификат№2 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Сертификат№2 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Сертификат№2 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Сертификат№2 child</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">Сертификат№3</a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Сертификат№3 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Сертификат№3 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Сертификат№3 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Сертификат№3 child</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">Сертификат№4</a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Сертификат№4 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Сертификат№4 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Сертификат№4 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Сертификат№4 child</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">Сертификат№5</a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Сертификат№5 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Сертификат№5 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Сертификат№5 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Сертификат№5 child</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="parent">
+                            <a href="#">Новости</a>
+                            <ul class="nav-child">
+                                <li class="parent">
+                                    <a href="#">Новость№1</a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Новость№1 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Новость№1 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Новость№1 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Новость№1 child</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">Новость№2</a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Новость№2 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Новость№2 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Новость№2 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Новость№2 child</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">Новость№3</a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Новость№3 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Новость№3 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Новость№3 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Новость№3 child</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">Новость№4</a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Новость№4 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Новость№4 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Новость№4 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Новость№4 child</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">Новость№5</a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Новость№5 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Новость№5 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Новость№5 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Новость№5 child</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="parent">
+                            <a href="#">Контакты</a>
+                            <ul class="nav-child">
+                                <li class="parent">
+                                    <a href="#">Контакт№1</a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Контакт№1 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Контакт№1 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Контакт№1 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Контакт№1 child</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">Контакт№2</a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Контакт№2 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Контакт№2 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Контакт№2 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Контакт№2 child</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">Контакт№3</a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Контакт№3 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Контакт№3 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Контакт№3 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Контакт№3 child</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">Контакт№4</a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Контакт№4 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Контакт№4 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Контакт№4 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Контакт№4 child</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">Контакт№5</a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">Контакт№5 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Контакт№5 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Контакт№5 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Контакт№5 child</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="parent">
+                            <a href="#">О компании</a>
+                            <ul class="nav-child">
+                                <li class="parent">
+                                    <a href="#">О компании№1</a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">О компании№1 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">О компании№1 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">О компании№1 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">О компании№1 child</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">О компании№2</a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">О компании№2 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">О компании№2 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">О компании№2 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">О компании№2 child</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">О компании№3</a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">О компании№3 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">О компании№3 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">О компании№3 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">О компании№3 child</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">О компании№4</a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">О компании№4 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">О компании№4 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">О компании№4 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">О компании№4 child</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#">О компании№5</a>
+                                    <ul class="nav-child">
+                                        <li>
+                                            <a href="#">О компании№5 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">О компании№5 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">О компании№5 child</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">О компании№5 child</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-desktop__box">
+                    <button class="main-button">
+                        Связаться с нами
+                    </button>
+                    <button class="search">
+                        <svg class="icon">
+                            <use xlink:href="assets/images/sprites.svg#lupa"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="socials__container">
+                    <a href="mailto:info@alkorplast.com" class="mail">
+                        info@alkorplast.com
+                    </a>
+                    <div class="socials">
+                        <a href="#" class="socials__links">
+                            <svg class="icon">
+                                <use xlink:href="assets/images/sprites.svg#fb"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="socials__links">
+                            <svg class="icon">
+                                <use xlink:href="assets/images/sprites.svg#inst"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="phone__container">
+                    <a href="tel:+380676795167" class="phone-number">
+                        <div class="phone-number__circle">
+                            <svg class="icon">
+                                <use xlink:href="assets/images/sprites.svg#phone"></use>
+                            </svg>
+                        </div>
+                        <div class="phone-number__text">
+                            + 380 (67) 679-51-67
+                            <span>Узнавайте подробности</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!-- header-mob end -->
         <header class="header">
             <a href="/" class="logo">
-                <img class="logo-img" src="assets/images/main-screen/logo.png" alt="Alkorplast">
+                <img class="logo-img" src="assets/images/main-screen/logo.svg" alt="Alkorplast">
             </a>
             <nav class="nav">
                 <ul class="menu">
@@ -643,7 +1234,7 @@
         </div>
     </div>
     <div class="content-container">
-        <div class="products">
+        <section class="products">
             <div class="wrapper">
                 <h2 class="main-title">
                     Наша продукция
@@ -665,7 +1256,7 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                             </p>
                             <a href="#" class="products-item__link">
-                                Смотреть каталог
+                                <span>Смотреть</span> каталог
                             </a>
                         </div>
                     </div>
@@ -682,7 +1273,7 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                             </p>
                             <a href="#" class="products-item__link">
-                                Смотреть каталог
+                                <span>Смотреть</span> каталог
                             </a>
                         </div>
                     </div>
@@ -699,7 +1290,7 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                             </p>
                             <a href="#" class="products-item__link">
-                                Смотреть каталог
+                                <span>Смотреть</span> каталог
                             </a>
                         </div>
                     </div>
@@ -716,7 +1307,7 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                             </p>
                             <a href="#" class="products-item__link">
-                                Смотреть каталог
+                                <span>Смотреть</span> каталог
                             </a>
                         </div>
                     </div>
@@ -733,7 +1324,7 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                             </p>
                             <a href="#" class="products-item__link">
-                                Смотреть каталог
+                                <span>Смотреть</span> каталог
                             </a>
                         </div>
                     </div>
@@ -750,7 +1341,7 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                             </p>
                             <a href="#" class="products-item__link">
-                                Смотреть каталог
+                                <span>Смотреть</span> каталог
                             </a>
                         </div>
                     </div>
@@ -767,14 +1358,14 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                             </p>
                             <a href="#" class="products-item__link">
-                                Смотреть каталог
+                                <span>Смотреть</span> каталог
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="about">
+        </section>
+        <section class="about">
             <div class="wrapper">
                 <h2 class="main-title">
                     О компании
@@ -782,8 +1373,127 @@
                 <p class="main-subtitle">
                     узнайте больше о компании
                 </p>
+                <div class="about__container">
+                    <div class="about__image">
+                        <img src="assets/images/about-us/main.png" alt="Хранение пищи">
+                    </div>
+                    <div class="about__content">
+                        <h4 class="about__title">
+                            <span>Мало кто задумывается о том,</span> 
+                            <span>насколько важно то,</span> 
+                            <span>как храниться наша пища.</span>
+                        </h4>
+                        <p class="about__text">
+                            Пластиковая упаковочная посуда давно стала обыденностью. Однако, вряд ли ее токсичность, 
+                            которая впоследствии вредит здоровью человека, становится критерием при ее выборе.
+                        </p>
+                        <div class="about__image--mob">
+                            <img src="assets/images/about-us/main.png" alt="Хранение пищи">
+                        </div>
+                        <p class="about__text about__text--margin">
+                            Мы ответственно подходим к безопасности хранения продуктов питания, 
+                            поэтому предоставляем только качественные упаковочные решения. Все элементы нашей 
+                            продукции имеют разные свойства, а наши сотрудники позаботятся о том, 
+                            чтобы она полностью соответствовала запросам потребителей.
+                        </p>
+                        <button class="main-button">
+                            Связаться с нами
+                        </button>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+        <section class="advantages">
+            <div class="wrapper">
+                <h3 class="block-title">
+                    Основные ценности
+                </h3>
+                <div class="advantages-container">
+                    <div class="advantages__slider">
+                        <div class="advantages-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="advantages-item">
+                                        <div class="advantages-item__info">
+                                            <span class="advantages-item__number">01/</span>
+                                            <svg class="icon">
+                                                <use xlink:href="assets/images/sprites.svg#icon1"></use>
+                                            </svg>
+                                        </div>
+                                        <h4 class="advantages-item__title">
+                                            Качество
+                                        </h4>
+                                        <p class="advantages-item__descript">
+                                            Нам важно предоставлять безвредную для контакта с пищей упаковку, 
+                                            поэтому наша пластиковая посуда соответствует сертификации ISO-22000.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="advantages-item">
+                                        <div class="advantages-item__info">
+                                            <span class="advantages-item__number">02/</span>
+                                            <svg class="icon">
+                                                <use xlink:href="assets/images/sprites.svg#icon2"></use>
+                                            </svg>
+                                        </div>
+                                        <h4 class="advantages-item__title">
+                                            Доступность
+                                        </h4>
+                                        <p class="advantages-item__descript">
+                                            Мы уверены, что качественная упаковочная продукция должна быть 
+                                            доступной и рентабельной для производителей и потребителей.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="advantages-item">
+                                        <div class="advantages-item__info">
+                                            <span class="advantages-item__number">03/</span>
+                                            <svg class="icon">
+                                                <use xlink:href="assets/images/sprites.svg#icon3"></use>
+                                            </svg>
+                                        </div>
+                                        <h4 class="advantages-item__title">
+                                            Разнообразность
+                                        </h4>
+                                        <p class="advantages-item__descript">
+                                            Наш ассортимент настолько обширный, что мы можем подобрать 
+                                            герметичную упаковку для любой пищевой продукции и любых целей.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="advantages-item">
+                                        <div class="advantages-item__info">
+                                            <span class="advantages-item__number">04/</span>
+                                            <svg class="icon">
+                                                <use xlink:href="assets/images/sprites.svg#icon4"></use>
+                                            </svg>
+                                        </div>
+                                        <h4 class="advantages-item__title">
+                                            Технологии
+                                        </h4>
+                                        <p class="advantages-item__descript">
+                                            Наша продукция производится путем термоформования, 
+                                            что предполагает собой безопасное нагревание исходных материалов.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="advantages-slider__controls">
+                            <button class="slider-controls advantages-prev" type="button">
+                                Листай вправо 
+                            </button>
+                            <button class="slider-controls advantages-next" type="button">
+                                Листай влево
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
     <script src="js/app.min.js"></script>
 </body>

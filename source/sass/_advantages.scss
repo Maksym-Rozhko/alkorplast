@@ -1,0 +1,213 @@
+.advantages {
+    overflow: hidden;
+
+    .block-title {
+        @include fontCopperplate;
+        font-size: 30px;
+        line-height: 140%;
+        color: #27353F;
+        text-align: center;
+        margin-bottom: 78px;
+        margin-top: 0;
+    }
+
+    &-slider {
+        padding-bottom: 50px;
+        overflow: inherit;
+    }
+
+    &-container {
+        padding-bottom: 120px;
+        border-bottom: 1px solid #E8F1FE;
+    }
+
+    &-item {
+        background: #FFFFFF;
+        box-shadow: 5px 20px 26px 4px rgba(20, 69, 129, 0.05);
+        border-radius: 8px;
+        max-width: 300px;
+        max-height: 300px;
+        padding-top: 26px;
+        padding-bottom: 44px;
+        padding-left: 44px;
+        padding-right: 44px;
+        transition: all ease-in-out .4s;
+
+        &__info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            & .icon {
+                transition: all ease-in-out .4s;
+                width: 52px;
+                height: 52px;
+                fill: #1D77F1;
+            }
+        }
+
+        &__number {
+            transition: all ease-in-out .4s;
+            @include fontCopperplate;
+            font-size: 14px;
+            line-height: 100%;
+            color: #2F3744;
+        }
+
+        &__title {
+            transition: all ease-in-out .4s;
+            @include fontCopperplate;
+            color: #2F3744;
+            font-size: 20px;
+            line-height: 100%;
+            margin-top: 17px;
+            margin-bottom: 20px;
+        }
+
+        &__descript {
+            transition: all ease-in-out .4s;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 16px;
+            line-height: 140%;
+            color: #27353F;
+        }
+
+        &:hover {
+            background: linear-gradient(119.95deg, #1DC7FC 2.51%, #1D77F1 98.28%);
+            transform: translateY(-80px);
+        }
+
+        &:hover &__info {
+            & .icon {
+                fill: #fff;
+                opacity: .65;
+            }
+        }
+
+        &:hover &__number {
+            color: #fff;
+        }
+
+        &:hover &__title {
+            color: #fff;
+        }
+
+        &:hover &__descript {
+            color: #fff;
+        }
+    }
+
+    .advantages-slider__controls {
+        display: none;
+        justify-content: space-between;
+
+        .slider-controls {
+            font-size: 14px;
+            line-height: 140%;
+            color: #27353F;
+            border: none;
+            background-color: transparent;
+            position: relative;
+            transition: all ease-in-out .4s;
+
+            &.swiper-button-disabled {
+                opacity: 0;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                background-image: url('../assets/images/main-screen/icons/arrow-down.svg');
+                background-repeat: no-repeat;
+                width: 12px;
+                height: 12px;
+                background-position: center;
+                background-size: auto;
+                top: calc(50% - 6px);
+                opacity: .5;
+            }
+        }
+
+        .advantages-prev {
+            &::before {
+                transform: rotate(-90deg);
+                right: -10px;
+            }
+        }
+
+        .advantages-next {
+            &::before {
+                transform: rotate(90deg);
+                left: -10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .advantages {
+        padding-bottom: 100px;
+
+        .block-title {
+            margin-bottom: 17px;
+        }
+
+        &-container {
+            padding-bottom: 0;
+            border: none;
+        }
+
+        &-slider {
+            padding-bottom: 30px;
+        }
+
+        .swiper-slide-active &-item {
+            background: linear-gradient(119.95deg, #1DC7FC 2.51%, #1D77F1 98.28%);
+
+            &__info {
+                & .icon {
+                    fill: #fff;
+                    opacity: .65;
+                }
+            }
+
+            &__number {
+                color: #fff;
+            }
+
+            &__title {
+                color: #fff;
+            }
+
+            &__descript {
+                color: #fff;
+            }
+        }
+
+        &-item {
+            &__title {
+                margin-top: 0;
+                margin-bottom: 17px;
+            }
+
+            &:hover {
+                transform: translateY(0);
+            }
+        }
+
+        .advantages-slider__controls {
+            display: flex;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .advantages {
+        &-item {
+            &__descript {
+                font-size: 14px;
+            }
+        }
+    }
+}

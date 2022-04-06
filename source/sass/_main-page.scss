@@ -1,5 +1,5 @@
 .main-screen {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     position: relative;
     overflow: hidden;
@@ -26,7 +26,7 @@
     width: 100%;
     padding-top: 41px;
     padding-bottom: 110px;
-    max-height: 970px;
+    min-height: 970px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -319,6 +319,7 @@
 .main-screen__contacts > .search > .icon {
     width: 15px;
     height: 22px;
+    fill: #fff;
 }
 
 .location,
@@ -408,6 +409,7 @@
 }
 
 .search {
+    cursor: pointer;
     border: none;
     width: 52px;
     height: 49px;
