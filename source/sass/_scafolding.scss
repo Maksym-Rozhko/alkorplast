@@ -21,18 +21,79 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: 95%;
-  // outline: 2px solid red;
+}
+
+::-webkit-scrollbar {width: 12px;height: 12px;}
+::-webkit-scrollbar-track-piece {background:rgba(0,0,0,0);}
+::-webkit-scrollbar-thumb:vertical {height:10px;background:#1d77f1;}
+::-webkit-scrollbar-thumb:vertical:hover {background:#333333;}
+
+.breadcrumb {
+  margin-top: 21px;
+  margin-bottom: 74px;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  justify-content: center;
+
+  & > li:first-child {
+    display: none;
+  }
+
+  & > li {
+    font-size: 12px;
+    line-height: 140%;
+    position: relative;
+  }
+
+  & > li:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  & > li > a,
+  & > li > span {
+    font-size: 12px;
+    line-height: 140%;
+    color: #92A6B4;
+    text-decoration: none;
+  }
+
+  & > li:hover > a {
+    color: #1d77f1;
+    text-decoration: #1d77f1;
+  }
+
+  & > li > .divider::before {
+    content: "/";
+    font-size: 14px;
+    line-height: 140%;
+    color: #92A6B4;
+    position: absolute;
+    top: calc(50% - 9px);
+    right: -10px;
+  }
+
+  & > li > span>img {
+    display: none;
+  }
+}
+
+.bread-crumbs {
+  display: block;
+  margin-top: 21px;
+  margin-bottom: 73px;
+  text-align: center;
 }
 
 @mixin fontCopperplate {
-  font-family: 'Copperplate', serif;
+  font-family: 'Copperplate', sans-serif;
   font-weight: normal;
   font-style: normal;
 }
 
 @mixin title {
-  font-family: sans-serif;
-  font-weight: bold;
+  font-family: 'Proxima Bold', sans-serif;
+  font-weight: 700;
   font-size: 48px;
   line-height: 58px;
   text-align: center;

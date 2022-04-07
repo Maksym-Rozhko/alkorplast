@@ -128,7 +128,8 @@
     }
 }
 
-.header-mobile.header__desktop-active {
+.header-mobile.header__desktop-active,
+.header-mobile.header-active-stat {
     display: flex;
     max-width: inherit;
     max-height: 80px;
@@ -150,7 +151,8 @@
         }
     }
 
-    & .nav-container.nav__desktop-active {
+    & .nav-container.nav__desktop-active,
+    & .nav-container.nav-active-stat {
         display: flex;
         justify-content: space-between;
         width: 1290px;
@@ -160,6 +162,9 @@
             padding-top: 0;
             margin-left: 250px;
             width: 780px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
 
             & .menu {
                 flex-direction: row;
@@ -223,9 +228,11 @@
 }
 
 @media (max-width: 1670px) {
-    .header-mobile.header__desktop-active {
+    .header-mobile.header__desktop-active,
+    .header-mobile.header-active-stat {
         
-        & .nav-container.nav__desktop-active {
+        & .nav-container.nav__desktop-active,
+        & .nav-container.nav-active-stat {
            
             & .nav {
                 .nav-child>.parent>.nav-child {
@@ -238,9 +245,11 @@
 }
 
 @media (max-width: 1275px) {
-    .header-mobile.header__desktop-active {
+    .header-mobile.header__desktop-active,
+    .header-mobile.header-active-stat {
 
-        & .nav-container.nav__desktop-active {
+        & .nav-container.nav__desktop-active,
+        & .nav-container.nav-active-stat {
             justify-content: start;
 
             & .nav {
@@ -268,9 +277,11 @@
 }
 
 @media (max-width: 1110px) {
-    .header-mobile.header__desktop-active {
+    .header-mobile.header__desktop-active,
+    .header-mobile.header-active-stat {
 
-        & .nav-container.nav__desktop-active {
+        & .nav-container.nav__desktop-active,
+        & .nav-container.nav-active-stat {
             & .nav {
                 margin-left: 400px;
             }
@@ -282,9 +293,11 @@
 }
 
 @media (max-width: 982px) {
-    .header-mobile.header__desktop-active {
+    .header-mobile.header__desktop-active,
+    .header-mobile.header-active-stat {
 
-        & .nav-container.nav__desktop-active {
+        & .nav-container.nav__desktop-active,
+        & .nav-container.nav-active-stat {
             & .nav {
                 width: 580px;
                 margin-left: 450px;
@@ -303,9 +316,11 @@
 
 
 @media (max-width: 812px) {
-    .header-mobile.header__desktop-active {
+    .header-mobile.header__desktop-active,
+    .header-mobile.header-active-stat {
     
-        & .nav-container.nav__desktop-active {
+        & .nav-container.nav__desktop-active,
+        & .nav-container.nav-active-stat {
             display: none;
         }
     }
