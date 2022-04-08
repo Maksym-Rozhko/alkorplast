@@ -1,0 +1,108 @@
+.footer {
+    position: relative;
+    padding-top: 22px;
+    padding-bottom: 20px;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        .footer__copyright {
+            font-family: sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 140%;
+            color: #92A6B4;
+        }
+
+        .footer-info {
+            a {
+                text-decoration: none;
+                font-size: 12px;
+                line-height: 15px;
+                color: #92A6B4;
+                transition: all ease-in-out .4s;
+
+                &:hover {
+                    color: #1d77f1;
+                }
+            }
+
+            &__conditions {
+                margin-right: 40px;
+            }
+        }
+
+        .scroll-top {
+            border: 1px solid #92A6B4;
+            border-radius: 47px;
+            width: 48px;
+            height: 48px;
+            background-color: transparent;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all ease-in-out .4s;
+
+            &:hover {
+                border: 1px solid #1DA4F7;
+
+                .icon {
+                    fill: #1DA4F7
+                }
+            }
+
+            .icon {
+                width: 25px;
+                height: 25px;
+                transform: rotate( -90deg);
+                fill: #92A6B4;
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .footer {
+
+        &__container {
+    
+            .footer-info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &__conditions {
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .footer {
+
+        &__container {
+            flex-direction: column-reverse;
+
+            .footer-info {
+                margin-bottom: 27px;
+
+                &__conditions {
+                    margin-bottom: 10px;
+                }
+            }
+
+            .scroll-top {
+                position: absolute;
+                right: 15px;
+                bottom: 38px;
+            }
+        }
+    }
+}
