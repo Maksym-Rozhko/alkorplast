@@ -1,0 +1,132 @@
+.contact-menu {
+    position: fixed;
+    right: 10px;
+    bottom: 50px;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    z-index: 1000;
+    transition: all ease-in-out .4s;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 87px;
+        height: 87px;
+        top: calc(50% - 45px);
+        left: calc(50% - 45px);
+        border-radius: 50%;
+        border: 1px solid #1D77F1;
+    }
+    
+    .icon-chat,
+    .link {
+        color: #fff;
+        background: linear-gradient(180deg, #1DC7FC 0%, #1D77F1 83.33%);
+        box-shadow: inset 0px -1px 4px rgba(0, 0, 0, 0.25);
+        transform: rotate(45deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .icon-chat::before,
+    .link:before {
+        transform: rotate(-45deg);
+    }
+
+    .icon-chat {
+        font-size: 28px;
+        width: 73px;
+        height: 73px;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        animation: pulse 3s infinite;
+
+        .icon {
+            width: 35px;
+            height: 35px;
+            fill: #fff;
+            transform: rotate(-45deg);
+        }
+    }
+
+    .link {
+        width: 0;
+        height: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        border: 2px solid transparent;
+
+        .icon {
+            width: 15px;
+            height: 15px;
+            fill: #fff;
+            transform: rotate(-45deg);
+        }
+
+        &:hover {
+            border: 2px solid #1D77F1;
+            background: #fff;
+
+            .icon {
+                fill: #1D77F1;
+            }
+        }
+    }
+
+    &:hover::before {
+        opacity: 0;
+    }
+
+    &:hover .icon-chat {
+        width: 0;
+        height: 0;
+    }
+
+    &:hover .link {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+    }
+
+    &:hover .icon-tel {
+        bottom: auto;
+        margin-top: 0;
+    }
+
+    &:hover .icon-viber {
+        left: auto;
+        margin-right: 0;
+    }
+
+    &:hover .icon-whatsapp {
+        top: auto;
+        margin-bottom: 0;
+    }
+
+    &:hover .icon-telegram {
+        right: auto;
+        margin-left: 0;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0px rgba(29,218,252, 0.5);
+    }
+
+    30% {
+        box-shadow: 0 0 10px 20px rgba(29,218,252, 0.1);
+    }
+}

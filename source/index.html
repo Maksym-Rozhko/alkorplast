@@ -1895,6 +1895,91 @@
             </div>
         </div>
     </footer>
+
+    <div class="contact-menu">
+        <div class="icon-chat">
+            <svg class="icon">
+                <use xlink:href="assets/images/sprites.svg#chat"></use>
+            </svg>
+        </div> 
+        <a href="tel:" class="link icon-tel">
+            <svg class="icon">
+                <use xlink:href="assets/images/sprites.svg#tel"></use>
+            </svg>
+        </a> 
+        <a href="tg:" class="link icon-telegram link-msg">
+            <svg class="icon">
+                <use xlink:href="assets/images/sprites.svg#telegram"></use>
+            </svg>
+        </a> 
+        <a href="viber:" class="link icon-viber link-msg">
+            <svg class="icon">
+                <use xlink:href="assets/images/sprites.svg#viber"></use>
+            </svg>
+        </a> 
+        <a href="whatsapp:" class="link icon-whatsapp link-msg">
+            <svg class="icon">
+                <use xlink:href="assets/images/sprites.svg#email"></use>
+            </svg>
+        </a> 
+    </div>
+    <div class="pop-up__overflow">
+        <div class="pop-up__container"> 
+            <button type="button" class="pop-up__close">
+                <span class="pop-up__cline"></span>
+            </button>
+            <div class="pop-up__content">
+                <form class="pop-up__form" method="POST" action="" utocomplete="off" enctype="multipart/form-data">
+                    <input type="hidden" name="host" value="tairovskie-sady">
+                    <h4 class="pop-up__title">
+                        У Вас остались вопросы?
+                    </h4>
+                    <p class="main-subtitle">
+                        узнайте подробности
+                    </p>
+                    <div class="pop-up__form-block">
+                        <div class="form-group"> 
+                            <input id="formName1" class="input input-name" name="Имя" required type="text"> 
+                            <label for="formName1" class="label">Ваше имя</label> 
+                        </div>
+                        <div class="form-group form-group--margin"> 
+                            <input id="formTel1" class="input input-tel" name="Телефон" oninput="this.value=this.value.replace(/[^0-9\s]/g,'');" required type="tel"> 
+                            <label for="formTel1" class="label label-submit">Телефон</label> 
+                        </div>
+                        <button type="submit" class="main-button">
+                            Отправить
+                        </button>
+                        <strong class="pop-up__privacy">Ваши данные не будут передаваться третьим лицам</strong>
+                        <a href="#" class="pop-up__policy">(политика конфиденциальности)</a>
+                    </div>
+                    <div class="pop-up__block">
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="pop-up__thanks">
+        <div class="pop-up__container"> 
+            <button type="button" class="pop-up__close">
+                <span class="pop-up__cline"></span>
+            </button>
+            <div class="pop-up__content">
+                <svg class="icon">
+                    <use xlink:href="assets/images/sprites.svg#icon"></use>
+                </svg>
+                <h4 class="pop-up__title">
+                    Ваш казаз принят!
+                </h4>
+                <p class="pop-up__text">
+                    Для того, чтобы продолжить покупку перейдите в наш каталог товаров
+                </p>
+                <a href="#" class="main-button pop-up__close">
+                    В каталог
+                </a>
+            </div>
+        </div>
+    </div>
     <script src="js/app.min.js"></script>
 </body>
 </html>
