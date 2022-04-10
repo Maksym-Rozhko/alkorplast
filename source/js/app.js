@@ -41,3 +41,136 @@ burgerMenuElem.addEventListener('click', () => {
     logoElem.classList.toggle('logo--padding');
     navContainer.classList.toggle('nav-active-stat');
 });
+
+const avdantagesSlider = new Swiper('.advantages-slider.swiper-container', {
+    slidesPerView: 4,
+
+    navigation: {
+      nextEl: '.advantages-next',
+      prevEl: '.advantages-prev',
+    },
+
+    breakpoints: {
+      300: {
+        slidesPerView: 1.2,
+        spaceBetween: 10,
+      },
+      650: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1000: {
+        slidesPerView: 3,
+      },
+      1400: {
+        slidesPerView: 4,
+      },
+    }
+});
+
+const gallerySlider = new Swiper('.gallery-slider.swiper-container', {
+
+    slidesPerView: 'auto',
+    spaceBetween: 15,
+    autoplay: true,
+
+    pagination: {
+        el: '.gallery-pagin',
+        clickable: true,
+    },
+
+    breakpoints: {
+        300: {
+          slidesPerView: 1,
+          spaceBetween: 15,
+        },
+        575: {
+          slidesPerView: 'auto',
+          spaceBetween: 15,
+        },
+    }
+});
+
+const popularSlider = new Swiper('.popular-slider.swiper-container', {
+    slidesPerView: 4,
+
+    navigation: {
+      nextEl: '.popular-next',
+      prevEl: '.popular-prev',
+    },
+
+    breakpoints: {
+      300: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      675: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1000: {
+        slidesPerView: 3,
+      },
+      1400: {
+        slidesPerView: 4,
+      },
+    }
+});
+
+const partnersSlider = new Swiper('.partners-slider.swiper-container', {
+  autoplay: true,
+  loop: true,
+
+  pagination: {
+    el: '.partners-pagin',
+    clickable: true,
+  },
+
+  breakpoints: {
+    300: {
+      slidesPerView: 'auto',
+      spaceBetween: 15,
+      centeredSlides: true,
+    },
+    475: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1000: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+    1500: {
+      slidesPerView: 5,
+      spaceBetween: 30,
+    },
+    1900: {
+      slidesPerView: 6,
+      spaceBetween: 30,
+    },
+  }
+});
+
+const ourCatedoriesSlider = new Swiper('.our-categories-slider.swiper-container', {
+  autoplay: true,
+
+  pagination: {
+    el: '.our-categories-pagin',
+    clickable: true,
+  },
+
+  breakpoints: {
+    300: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+    },
+    812: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  }
+});
