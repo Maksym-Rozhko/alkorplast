@@ -174,3 +174,91 @@ const ourCatedoriesSlider = new Swiper('.our-categories-slider.swiper-container'
     },
   }
 });
+
+const formInputElems = document.querySelectorAll('.input');
+const formLabelElems = document.querySelectorAll('.label');
+
+const isFormInputsEmpty = (input) => {
+
+  if (input.classList.contains('input-name')) {
+    return 'name';
+  }
+
+  if (input.classList.contains('input-tel')) {
+    return 'tel';
+  }
+};
+
+formInputElems.forEach(input => {
+  input.addEventListener('change', () => {
+    
+    if (input.value !== '' && isFormInputsEmpty(input) === 'name') {
+      formLabelElems[0].classList.add('label-active');
+    }
+    if (input.value !== '' && isFormInputsEmpty(input) === 'tel') {
+      formLabelElems[1].classList.add('label-active');
+    } 
+  });
+});
+
+const btnScrollUp = document.querySelector('.scroll-top');
+const topElem = document.querySelector('.main-screen'); 
+
+btnScrollUp.addEventListener('click', () => {
+  topElem.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+});
+
+const popUpOverflow = document.querySelector('.pop-up__overflow');
+const popUpThanks = document.querySelector('.pop-up__thanks');
+const btnPopUpCloseElem = document.querySelectorAll('.pop-up__close');
+const orderCallElems = document.querySelectorAll('.callback-form');
+
+const openPopUp = () => {
+  popUpOverflow.classList.add('pop-up__active');
+  document.addEventListener('keydown', escapeHandler);
+};
+
+const openPopUpOrder = () => {
+  popUpOverflow.classList.add('pop-up__active');
+  document.addEventListener('keydown', escapeHandler);
+};
+
+const showPopUpThanks = () => {
+  popUpThanks.classList.add('pop-up__active');
+  document.addEventListener('keydown', escapeHandler);
+};
+
+const closePopUp = () => {
+  popUpOverflow.classList.remove('pop-up__active');
+  popUpThanks.classList.remove('pop-up__active');
+  document.removeEventListener('keydown', escapeHandler);
+};
+
+const escapeHandler = e => {
+  e.code === 'Escape' ? closePopUp() : false;
+}
+
+btnPopUpCloseElem.forEach(btn => btn.addEventListener('click', () => closePopUp()));
+
+const checkPopUpActive = (popUpElem, e) => {
+  const target = e.target;
+  target.classList.contains('pop-up__close') || target === popUpElem ? closePopUp() : false;
+};
+
+popUpOverflow.addEventListener('click', e => checkPopUpActive(popUpOverflow, e));
+popUpThanks.addEventListener('click', e => checkPopUpActive(popUpThanks, e));
+
+orderCallElems.forEach(item => {
+  item.addEventListener('click', e => {
+    e.preventDefault();
+    openPopUpOrder();
+  });
+});
+
+const clearInputs = () => {
+  const allInputs = document.querySelectorAll('input');
+  allInputs.forEach(input => input.value = '');
+};
