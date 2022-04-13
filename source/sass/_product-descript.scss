@@ -1,0 +1,18 @@
+// .main-screen {
+//     min-height: inherit;
+
+//     &::before {
+//         content: none;
+//     }
+// }
+
+.product-descript {
+    padding-top: 170px;
+
+    .popular {
+        &::before,
+        &::after {
+            content: none;
+        }
+    }
+}
