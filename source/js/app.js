@@ -262,3 +262,35 @@ const clearInputs = () => {
   const allInputs = document.querySelectorAll('input');
   allInputs.forEach(input => input.value = '');
 };
+
+const categoriesNavItem = document.querySelectorAll('.categories-nav__item');
+const categoriesLinks = document.querySelectorAll('.categories__link');
+
+const removeAllListItems = (listElems) => {
+  listElems.forEach(elem => {
+    if (elem.classList.contains('categories-nav__item')) {
+      listElems.forEach(elem => elem.classList.remove('categories-nav__item-active'));
+    }
+    if (elem.classList.contains('categories__link')) {
+      listElems.forEach(elem => elem.classList.remove('categories__link--active'));
+    }
+  });
+};
+
+categoriesNavItem.forEach((listElem, i) => {
+  listElem.addEventListener('click', () => {
+    if(!listElem.classList.contains('categories-nav__item-active')) {
+      removeAllListItems(categoriesNavItem);
+      listElem.classList.add('categories-nav__item-active');
+    }
+  });
+});
+
+categoriesLinks.forEach((listElem, i) => {
+  listElem.addEventListener('click', () => {
+    if(!listElem.classList.contains('categories__link--active')) {
+      removeAllListItems(categoriesLinks);
+      listElem.classList.add('categories__link--active');
+    }
+  });
+});
