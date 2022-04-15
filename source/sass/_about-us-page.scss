@@ -1,0 +1,224 @@
+.about-us-page {
+    padding-top: 75px;
+
+    .content-container-bottom {
+        &::before {
+            content: none;
+        }
+    }
+    .advantages {
+        &-container {
+            padding-bottom: 0;
+            border: none;
+        }
+    }
+    .gallery {
+        padding-bottom: 360px;
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url('../assets/images/popular-product/icon1.svg');
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 200px;
+            right: 110px;
+            top: 515px;
+        }
+    
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url('../assets/images/popular-product/icon2.svg');
+            background-repeat: no-repeat;
+            width: 140px;
+            height: 90px;
+            left: 250px;
+            bottom: 80px;
+        }
+    }
+
+    .our-story {
+        padding-bottom: 150px;
+
+        &__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__block {
+            max-width: 630px;
+
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+
+        &__title {
+            @include fontCopperplate;
+            font-size: 30px;
+            line-height: 31px;
+            color: #27353F;
+            margin-top: 0;
+            margin-bottom: 32px;
+        }
+
+        &__text {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 140%;
+            color: #27353F;
+        }
+    }
+
+    .our-categories {
+        padding-bottom: 150px;
+        &__title {
+            @include fontCopperplate;
+            font-size: 30px;
+            line-height: 31px;
+            color: #27353F;
+            margin-top: 0;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        &__container {
+            .our-categories__item {
+                img {
+                    max-width: 410px;
+                    width: 100%;
+                }
+            }
+            .our-categories-pagin {
+                position: relative;
+                margin-top: 40px;
+                bottom: 0;
+                
+                .swiper-pagination-bullet {
+                    opacity: .2;
+                    background: #92A6B4;
+                    width: 12px;
+                    height: 12px;
+                }
+
+                .swiper-pagination-bullet.swiper-pagination-bullet-active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .our-advantages {
+        padding-bottom: 150px;
+
+        &__block {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__block:not(:last-child) {
+            margin-bottom: 60px;
+        }
+
+        &__item {
+            max-width: 368px;
+        }
+
+        &__title {
+            @include fontCopperplate;
+            font-size: 20px;
+            line-height: 100%;
+            color: #27353F;
+            margin-top: 22px;
+            margin-bottom: 23px;
+        }
+
+        &__text {
+            font-size: 16px;
+            line-height: 140%;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+    }
+}
+
+@media (max-width: 1130px) {
+    .about-us-page {
+        .our-advantages {
+
+            &__container {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+    
+            &__block {
+                flex-direction: column;
+            }
+    
+            &__block:not(:last-child) {
+                margin-bottom: 0;
+            }
+    
+            &__item {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 812px) {
+    .about-us-page {
+        .our-categories {
+            &__container {
+                .our-categories__item {
+                    img {
+                        max-width: inherit;
+                    }
+                }
+            }
+        }
+        .our-advantages {
+            &__container {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .about-us-page {
+        padding-top: 110px;
+
+        .our-story {
+            padding-bottom: 50px;
+
+            &__container {
+                flex-direction: column;
+            }
+            &__block {
+                &:not(:last-child) {
+                    margin-right: 0;
+                }
+            }
+            &__title {
+                text-align: center;
+            }
+        }
+
+        .our-categories {
+            padding-bottom: 50px;
+        }
+
+        .gallery {
+            padding-bottom: 150px;
+        }
+
+        .our-advantages {
+            padding-bottom: 50px;
+        }
+    }
+}
