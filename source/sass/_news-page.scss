@@ -1,0 +1,209 @@
+.news-page {
+    padding-top: 170px;
+
+    &__container {
+        background: #FFFFFF;
+        box-shadow: 5px 20px 26px 4px rgba(20, 69, 129, 0.05);
+        border-radius: 8px;
+        margin-bottom: 72px;
+    }
+
+    &__image {
+        img {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            width: 100%;
+        }
+    }
+
+    &__content {
+        padding-left: 42px;
+        padding-right: 42px;
+        padding-bottom: 73px;
+        padding-top: 67px;
+    }
+
+    &__title {
+        @include fontCopperplate;
+        font-size: 30px;
+        line-height: 31px;
+        color: #27353F;
+        margin-top: 0;
+        margin-bottom: 32px;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 140%;
+        color: #27353F;
+        margin-top: 0;
+        margin-bottom: 0;
+        max-width: 1138px;
+    }
+
+    &__text--margin {
+        margin-top: 22px;
+        margin-bottom: 45px;
+    }
+
+    &__list {
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-left: 0;
+        list-style: none;
+        max-width: 930px;
+
+        &-item {
+            font-size: 16px;
+            line-height: 140%;
+            color: #27353F;
+            margin-top: 0;
+            margin-bottom: 0;
+            position: relative;
+            padding-left: 48px;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+            }
+
+            &::before {
+                background-image: url("../assets/images/news/news1/mark.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 10px;
+                height: 9px;
+                top: calc(50% - 14px);
+                left: 8px;
+            }
+
+            &::after {
+                width: 24px;
+                height: 24px;
+                border: 1px solid #1DA4F7;
+                border-radius: 50%;
+                top: calc(50% - 50%);
+                left: 0;
+            }
+        }
+
+        &-item:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__images {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 45px;
+        margin-bottom: 45px;
+
+        img {
+            width: 49%;
+            border-radius: 4px;
+        }
+    }
+
+    .news-item__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .main-button {
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            max-width: 190px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .news-page {
+        &__list {
+            max-width: 630px;
+    
+            &-item {
+                &::before {
+                    top: calc(50% - 24px);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 730px) {
+    .news-page {
+        &__list {
+            max-width: 415px;
+    
+            &-item {
+                &::before {
+                    top: calc(50% - 47px);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .news-page {
+        &__content {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        &__list {
+            max-width: 415px;
+    
+            &-item {
+                padding-left: 34px;
+
+                &::before {
+                    top: calc(50% - 47px);
+                }
+            }
+        }
+
+        &__images {
+            flex-direction: column;
+    
+            img {
+                width: 100%;
+            }
+            .img-margin {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 444px) {
+    .news-page {
+
+        &__title {
+            font-size: 22px;
+            line-height: 23px;
+        }
+
+        &__list {
+            max-width: 280px;
+    
+            &-item {
+                
+                &::before {
+                    top: calc(50% - 79px);
+                }
+            }
+        }
+
+        .news-item__info {
+            .main-button {
+                max-width: 140px;
+            }
+        }
+    }
+}
