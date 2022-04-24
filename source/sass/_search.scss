@@ -1,0 +1,122 @@
+.search-container {
+    .search > .form-inline > .element-invisible {
+        display: none;
+    }
+
+    .search > .form-inline > .button.btn.btn-primary {
+        display: none;
+    }
+
+    .search {
+        position: absolute;
+        z-index: 111;
+        bottom: -49px;
+        max-width: 340px;
+        right: 0;
+        transition: all 1s linear;
+        width: 0;
+        opacity: 0;
+    }
+
+    .form-inline {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inputbox.search-query.input-medium {
+        height: 50px;
+        background: transparent;
+        border: 1px solid #1d77f1;
+        color: #27353f;
+        padding: 15px;
+    }
+
+    .search.active-input {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+.header__desktop-active .search-container .search {
+    background: #fff;
+}
+
+.header.header-mobile .search-container .search {
+    height: auto;
+    background: #fff;
+}
+
+.search-sections {
+    padding-top: 110px;
+
+    .search {
+        width: 100%;
+        height: auto;
+    }
+
+    .search-results {
+        margin-top: 0;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .search-results__box {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        text-decoration: none;
+        margin-bottom: 50px;
+        margin-right: 30px;
+        
+        &:nth-child(4n+4) {
+            margin-right: 0;
+        }
+
+        .popular-item__img > img {
+            width: 100%;
+        }
+
+        .popular-item__info > .result-title {
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 100%;
+            color: #2f3744;
+            margin-bottom: 10px;
+        }
+
+        .popular-item__info > dd {
+            margin-left: 0; 
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 100%;
+            color: #2f3744;
+        }
+    }
+
+    .error {
+        margin-top: 18px;
+        margin-bottom: 0;
+        font-size: 20px;
+        line-height: 140%;
+        color: #27353f;
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .search-results__box {
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 630px) {
+    .search-sections .search-results {
+        flex-direction: column;
+    }
+}

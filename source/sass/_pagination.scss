@@ -1,0 +1,125 @@
+.pagination {
+    display: flex;
+    margin-bottom: 110px;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 1290px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+
+    .counter.pull-right,
+    .pagination-start,
+    .pagination-end {
+        display: none;
+    }
+
+    .pagination-list {
+        padding-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+
+    li > .pagenav {
+        font-family: 'Proxima Nova', sans-serif;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 100%;
+        text-align: center;
+        color: #92A6B4;
+        transition: all ease-in-out .4s;
+    }
+
+    li > .pagenav.active {
+        color: #27353F;
+    }
+
+    li:hover > .pagenav {
+        color: #27353F;
+    }
+
+    .number {
+        margin-right: 35px;
+    }
+
+    .pagination-prev {
+        margin-right: 35px;
+    }
+
+    .pagination-prev .pagenav.active {
+        color: #92A6B4;
+    }
+
+    .pagination-prev,
+    .pagination-next {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &:hover::before,
+        &:hover::after {
+        opacity: 1;
+        }
+
+        &::before,
+        &::after {
+        content: "";
+        position: absolute;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("../images/main-screen/icons/arrow-down.svg");
+        width: 12px;
+        height: 12px;
+        opacity: .5;
+        transition: all ease-in-out .4s;
+        }
+    }
+
+    .pagination-prev {
+        &::before,
+        &::after {
+        transform: rotate(90deg);
+        }
+
+        &::before {
+        left: -35px;
+        }
+
+        &::after {
+        top: calc(50% - 6px);
+        left: -29px;
+        }
+    }
+
+    .pagination-next {
+        &::before,
+        &::after {
+        transform: rotate(-90deg);
+        }
+
+        &::before {
+        right: -35px;
+        }
+
+        &::after {
+        top: calc(50% - 6px);
+        right: -29px;
+        }
+    }
+}
+
+@media (max-width: 1330px) {
+    .pagination {
+        max-width: 540px;
+    }
+}
+
+@media (max-width: 812px) {
+    .pagination {
+        justify-content: center;
+    }
+}
