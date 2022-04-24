@@ -1,6 +1,10 @@
 .contact-us {
-    padding-top: 170px;
+    padding-top: 125px;
     margin-bottom: 65px;
+
+    .mail > span > a {
+        padding-left: 0;
+    }
 
     &__container {
         display: flex;
@@ -97,6 +101,42 @@
         .contact-us__frame {
             width: 945px;
             height: 427px;
+        }
+    }
+
+    .messangers {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 130px;
+        margin: 10px 0;
+
+        .icon-link {
+            display: flex;
+            width: 35px;
+            height: 35px;
+            opacity: .5;
+            transition: all ease-in-out .4s;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        .icon-link.viber {
+            .icon {
+                fill: #8f5db7;
+            }
+        }
+        .icon-link.telegram {
+            .icon {
+                fill: #0088cc;
+            }
+        }
+        .icon-link.whatsup {
+            .icon {
+                fill: #43d854;
+            }
         }
     }
 }

@@ -28,13 +28,22 @@ img {
 ::-webkit-scrollbar-thumb:vertical {height:10px;background:#1d77f1;}
 ::-webkit-scrollbar-thumb:vertical:hover {background:#333333;}
 
-.breadcrumb {
+div[aria-label="Breadcrumbs"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 21px;
   margin-bottom: 74px;
+}
+
+.breadcrumb {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   padding-left: 0;
   list-style: none;
   justify-content: center;
+  width: 100%;
 
   & > li:first-child {
     display: none;
@@ -44,6 +53,7 @@ img {
     font-size: 12px;
     line-height: 140%;
     position: relative;
+    width: initial;
   }
 
   & > li:not(:last-child) {
@@ -76,13 +86,6 @@ img {
   & > li > span>img {
     display: none;
   }
-}
-
-.bread-crumbs {
-  display: block;
-  margin-top: 21px;
-  margin-bottom: 73px;
-  text-align: center;
 }
 
 @mixin fontCopperplate {
@@ -144,4 +147,37 @@ img {
   font-size: 14px;
   line-height: 100%;
   max-width: 270px;
+}
+
+.message-text {
+  @include fontCopperplate;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: #1d77f1;
+}
+
+.uForm__error-msg {
+  display: none;
+  color: red;
+}
+.uForm__extended {
+  display: none;
+}
+.uForm__preload {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../uForm/img/loading.gif') no-repeat;
+  background-size: 120px;
+  background-position: center;
+  margin: 0 auto;
+  background-color: #fff;
 }

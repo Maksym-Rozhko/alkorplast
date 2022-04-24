@@ -24,10 +24,22 @@
         position: relative;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
         z-index: 11111;
+        transform: translate(-50%,-1500px);
+        opacity: 0;
+        transition: all ease-in-out .4s;
     }
-    
+
+    &__container.container-form.is-active {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    &__container.container-thanks.is-active {
+        transform: translate(-50%, -100%);
+        opacity: 1;
+    }
+
     &__close {
         border: none;
         padding: 18px;
